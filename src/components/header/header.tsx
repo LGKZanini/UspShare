@@ -1,5 +1,5 @@
 import * as React from 'react';
-import logo from '../../img/UspShareIcon.png';
+import logo from '../../img/icons/UspShareIcon.png';
 
 import { 
     HeaderDiv, 

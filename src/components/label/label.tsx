@@ -5,6 +5,7 @@ import {
     ContainerLabel
 } from "./style";
 
+
 export class Label extends React.Component {
 
     render() {

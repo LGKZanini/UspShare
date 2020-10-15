@@ -9,11 +9,11 @@ import { SearchBar } from './components/search-box/search-box';
 function App() {
   return (
     <>
-      <Header />
+      <Header inicio={10}/>
       <BodyContainer>
         <SearchBar />
         <Label />
-        <Footer />
+        <Footer/>
       </BodyContainer>
     </>
   );

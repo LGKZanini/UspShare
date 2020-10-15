@@ -13,17 +13,6 @@ export class Header extends React.Component {
 
     constructor(props){
         super(props);
-        this.state = {
-            valorClick: 0
-        };
-    }
-
-    componentDidMount() {}
-
-    CliqueState () {
-        this.setState({
-            valorClick: 2
-        })
     }
 
     render() {
@@ -34,9 +23,7 @@ export class Header extends React.Component {
                 </Logo>
                 <Buttons>
                     <TextEntrar> Entrar </TextEntrar>
-                    <TextRegister> Registrar </TextRegister>
-                    <button onClick={this.CliqueState }> Teste </button>
-                    <text> {this.state.valorClick}</text>
+                    <TextRegister> Registar </TextRegister>
                 </Buttons>
             </HeaderDiv>
         );

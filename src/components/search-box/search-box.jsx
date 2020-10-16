@@ -19,6 +19,7 @@ export class SearchBar extends React.Component {
         this.state = {
             isSearch: false,
             isLoading: false,
+            textInput: ''
         }
     }
 
@@ -27,11 +28,13 @@ export class SearchBar extends React.Component {
 
         if(text.length !== 0){
             this.setState({
-                isSearch: true
+                isSearch: true,
+                textInput: text
             })
         }else{
             this.setState({
-                isSearch: false
+                isSearch: false,
+                textInput: text
             })
         }
     }

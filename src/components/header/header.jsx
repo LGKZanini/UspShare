@@ -28,7 +28,6 @@ export class Header extends React.Component {
         this.setState({ hideButton : !this.state.hideButton })
     }
 
-
     render() {
         return (
             <HeaderDiv>

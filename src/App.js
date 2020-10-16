@@ -1,12 +1,21 @@
 import React from 'react';
 
-import { Home } from './pages/home';
+import { Header } from './components/header/header';
+import { BodyContainer } from './components/body/style';
+import { Label } from './components/label/label'
+import { SearchBar } from './components/search-box/search-box';
+import { Footer } from './components/footer/footer';
 
 function App() {
   return (
     <>
-      <Home />
-    </>
+      <Header/>
+      <BodyContainer>
+        <SearchBar />
+        <Label />
+        <Footer />
+      </BodyContainer>
+    </>  
   );
 }
 

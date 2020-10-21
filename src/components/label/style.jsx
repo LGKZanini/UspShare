@@ -7,6 +7,7 @@ export const ContainerLabel = styled.div`
     padding: 4% 12% 4% 12%;
     display: flex;  
     justify-content: space-between;
+    align-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
 
@@ -19,7 +20,7 @@ export const ContainerLabel = styled.div`
 export const LabelDiv = styled.div`
     width: 240px;
     height: 280px;
-    margin: 0 12px 0 12px;
+    margin: 10px 12px 10px 12px;
 
     background: #FFFFFF;
     box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.2), 0px 20px 31px rgba(0, 0, 0, 0.14), 0px 8px 38px rgba(0, 0, 0, 0.12);

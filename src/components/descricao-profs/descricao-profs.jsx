@@ -9,7 +9,7 @@ import {
     NeckDescription,
     UserDescription,
     Borda
-} from './descricaoProfs.style';
+} from './descricao-profs.style';
 import Rating from '@material-ui/lab/Rating';
 
 export class DescricaoProfs extends React.Component {

@@ -4,7 +4,7 @@ import { Header } from '../components/header/header';
 import { Footer } from '../components/footer/footer';
 import { BodyContainer } from '../components/body/style';
 import { NavigationBar } from '../components/navigation-bar/navigation-bar';
-import { DescricaoProfs } from '../components/descricaoProfs/descricaoProfs';
+import { DescricaoProfs } from '../components/descricao-profs/descricao-profs';
 
 const pageName="Laboratório de Engenharia de software - PCS 3643 - Professores ";
 const nomeProf="Jorge Luiz Risco";

@@ -38,7 +38,10 @@ export const TextEntrar = styled.a`
     font-size: 18px;
     text-align: center;
     line-height: 21px;
+    
+    cursor: pointer;
     color: #FDAF2D;
+    
     &:hover{
         background: #E7E7E7;
     }
@@ -55,7 +58,10 @@ export const TextRegister = styled.a`
     font-size: 18px;
     line-height: 21px;
     text-align: center;
+    cursor: pointer;
+
     color: #FFFFFF;
+    
     &:hover{
         background: #E99100;
     }
@@ -72,7 +78,7 @@ export const ButtonHamburguerDiv = styled.div`
 
 export const HeaderSubDiv = styled.div`
     
-    max-height: ${ props => props.hide ? "60px" : "0px" };
+    max-height: ${ props => props.hide ? "0px" : "60px" };
     color: #FFFFFF;
     transition: max-height 1s ease-in-out;
     overflow:hidden;
@@ -92,8 +98,6 @@ export const LinkHeader = styled.a`
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
-
     color: #1094AB;
 `;
 

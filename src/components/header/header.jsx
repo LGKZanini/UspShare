@@ -13,7 +13,7 @@ import {
     ButtonHamburguerDiv,
     LinkHeader,
     LinkDiv
-} from "./style";
+} from "./header.style";
 
 export class Header extends React.Component {
 
@@ -34,7 +34,7 @@ export class Header extends React.Component {
                 <HeaderPrimaryDiv>
                     <ButtonHamburguerDiv>
                         <HamburgerMenu
-                            isOpen={this.state.hideButton}
+                            isOpen={!this.state.hideButton}
                             menuClicked={this.handleButtton}
                             width={24}
                             height={18}

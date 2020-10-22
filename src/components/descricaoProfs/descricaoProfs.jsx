@@ -10,11 +10,19 @@ import {
     UserDescription,
     Borda
 } from './descricaoProfs.style';
+import Rating from '@material-ui/lab/Rating';
 
 export class DescricaoProfs extends React.Component {
 
     constructor(props){
         super(props);
+        this.state = {
+            rating: 5 
+        }
+    }
+
+    handleChange = ( event, newValue) => {
+        this.setState({ rating: newValue });
     }
 
     render() {
@@ -27,9 +35,16 @@ export class DescricaoProfs extends React.Component {
                             {this.props.nomeProf}
                         </TextNomeProf></p>
                         <h1/>
-                        <TextTitle>
-                            Avaliação:
-                        </TextTitle><br/>
+                        <div>
+                            <TextTitle>
+                                Avaliação:
+                            </TextTitle>
+                            <Rating 
+                                name="Descrição"
+                                value={this.state.rating}
+                                onChange={ this.handleChange }
+                            />
+                        </div>
                     </NeckDescription>
                 </UserDescription>
                 <BodyDescription>

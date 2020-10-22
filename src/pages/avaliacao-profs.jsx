@@ -3,7 +3,7 @@ import React from 'react';
 import { Header } from '../components/header/header';
 import { Footer } from '../components/footer/footer';
 import { BodyContainer } from '../components/body/style';
-import { NavigationBar } from '../components/navigation_bar/navigation_bar';
+import { NavigationBar } from '../components/navigation-bar/navigation-bar';
 import { DescricaoProfs } from '../components/descricaoProfs/descricaoProfs';
 
 const pageName="Laboratório de Engenharia de software - PCS 3643 - Professores ";

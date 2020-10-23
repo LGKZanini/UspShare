@@ -1,9 +1,12 @@
-import * as React from 'react';
+import React, { Fragment } from 'react';
 
 import { 
     LabelDiv,
+    LabelSubMessage,
+    LabelTitle,
+    LabelImage,
     ContainerLabel
-} from "./style";
+} from "./label.style";
 
 
 export class Label extends React.Component {
@@ -11,10 +14,15 @@ export class Label extends React.Component {
     render() {
         return (
             <ContainerLabel>
-                <LabelDiv/>
-                <LabelDiv/>
-                <LabelDiv/>
-                <LabelDiv/>
+                {this.props.labelContent.map((content, index) => 
+                    <Fragment key={index+content.titleMessage}>
+                        <LabelDiv>
+                            <LabelTitle>{content.titleMessage}</LabelTitle>
+                            <LabelImage src={content.iconUrl} alt={content+index}/>
+                            <LabelSubMessage>{content.subMessage}</LabelSubMessage>
+                        </LabelDiv>
+                    </Fragment>
+                )}
             </ContainerLabel>
         );
     };

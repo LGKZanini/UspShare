@@ -27,7 +27,6 @@ export const TitleList = styled.span`
 `;
 
 export const ButtonSimple = styled.button`
-
     width: 25px;
     height: 10px;
     border: none;

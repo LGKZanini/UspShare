@@ -98,6 +98,10 @@ export const LinkHeader = styled.a`
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
+<<<<<<< HEAD:src/components/header/header.style.jsx
+=======
+
+>>>>>>> 828dbc4... ajustando alguns elementos:src/components/header/style.jsx
     color: #1094AB;
 `;
 

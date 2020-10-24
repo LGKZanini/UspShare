@@ -15,6 +15,9 @@ import {
     LinkDiv
 } from "./header.style";
 
+import { HeaderLogin } from '../header-login/header-login';
+
+
 export class Header extends React.Component {
 
     constructor(props){
@@ -48,10 +51,16 @@ export class Header extends React.Component {
                     <Logo>
                         <img src={logo} alt="logo"></img>
                     </Logo>
-                    <Buttons>
-                        <TextEntrar> Entrar </TextEntrar>
-                        <TextRegister> Registar </TextRegister>
-                    </Buttons>
+                    { this.props.isLogged
+                    ? (
+                        <HeaderLogin/>
+                    )
+                    : (
+                        <Buttons>
+                            <TextEntrar> Entrar </TextEntrar>
+                            <TextRegister> Registar </TextRegister>
+                        </Buttons>
+                    )}
                 </HeaderPrimaryDiv>
                 <HeaderSubDiv hide={this.state.hideButton}>
                     <LinkDiv>

@@ -8,6 +8,8 @@ export const ButtonListDiv = styled.div`
     display: flex;
     height: 40px;
     width: 80%;
+    margin-left:auto;
+    margin-right:auto;
     justify-content: space-between;
 
     background-color: rgba(16, 148, 171, 0.8);
@@ -18,9 +20,9 @@ export const TitleList = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 45px;
-
+    margin-left: 10px;
     text-align: center;
 
     color: #000000;
@@ -51,6 +53,8 @@ export const OutPutDiv = styled.div`
     color: #FFFFFF;
     transition: max-height 0.5s;
     overflow:hidden;
+    margin-left:auto;
+    margin-right:auto;
     
     width: 80%;
 

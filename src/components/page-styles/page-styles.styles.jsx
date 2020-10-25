@@ -13,6 +13,9 @@ export const Espacamento = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
-    margin-bottom: 35px;
 
+`;
+
+export const Espacamento2 = styled.div`
+    margin-top: 35px;
 `;

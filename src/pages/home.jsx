@@ -6,6 +6,7 @@ import { Label } from '../components/label/label';
 import { Footer } from '../components/footer/footer';
 import { SearchBar } from '../components/search-box/search-box';
 import { TitlePrinciple, SubTitle, BreakLine}  from '../components/fonts/fonts.style';
+import { Comments } from '../components/comments/comments';
 
 import BookIcon from '../img/icons/bookIcon.png';
 import ComputerIcon from '../img/icons/computerIcon.png';
@@ -51,6 +52,8 @@ export class Home extends React.Component {
                     <SubTitle>Faça uma busca pela disciplina que deseja</SubTitle>
                     <SearchBar />
                     <Label labelContent={contentLabel}/>
+                    <Comments />
+                    <BreakLine numberLines={1}/>
                     <Footer/>
                 </BodyContainer>
             </>

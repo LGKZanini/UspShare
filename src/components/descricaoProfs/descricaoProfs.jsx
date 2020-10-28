@@ -1,5 +1,6 @@
 import * as React from 'react';
 import iconEdge from '../../img/icons/borda.jpg'
+import {BreakLine} from '../fonts/fonts.style'
 
 import {
     TextNomeProf,
@@ -31,10 +32,10 @@ export class DescricaoProfs extends React.Component {
                 <UserDescription>
                     <Borda src ={iconEdge}/>
                     <NeckDescription>
-                        <p><TextNomeProf>
+                        <TextNomeProf>
                             {this.props.nomeProf}
-                        </TextNomeProf></p>
-                        <h1/>
+                        </TextNomeProf>
+                        <BreakLine numberLines={1}/>
                         <div>
                             <TextTitle>
                                 Avaliação:

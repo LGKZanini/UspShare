@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TextNomeProf = styled.a`
+export const TextNomeProf = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -10,7 +10,7 @@ export const TextNomeProf = styled.a`
     color: #000000;
 `;
 
-export const TextTitle = styled.a`
+export const TextTitle = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -21,17 +21,17 @@ export const TextTitle = styled.a`
 `;
 
 export const BodyDescription = styled.div`
-    margin-left: 150px;
+    margin-left: 13%;
     color: #000000;
 `;
 
 export const NeckDescription = styled.div`
-    margin: 50px;
+    margin: 5%;
     color: #000000;
 `;
 
 export const UserDescription = styled.div`
-    margin-left: 150px;
+    margin-left: 13%;
     display: flex;
     color: #000000;
 `;
@@ -45,7 +45,7 @@ export const Borda = styled.img`
     border: 5px solid #FDAF2D;
 `;
 
-export const TextDescricao = styled.a`
+export const TextDescricao = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
@@ -54,4 +54,3 @@ export const TextDescricao = styled.a`
 
     color: #000000;
 `;
-

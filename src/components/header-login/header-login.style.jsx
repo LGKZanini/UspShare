@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TextUser = styled.a`
+export const TextUser = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -12,7 +12,7 @@ export const TextUser = styled.a`
 `;
 
 
-export const TextCourse = styled.a`
+export const TextCourse = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;

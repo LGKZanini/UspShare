@@ -24,7 +24,7 @@ export const ButtonReturn = styled.button`
     
 `;
 
-export const TextPage = styled.a`
+export const TextPage = styled.span`
     margin: auto 0;
     font-family: Quicksand;
     font-style: normal;

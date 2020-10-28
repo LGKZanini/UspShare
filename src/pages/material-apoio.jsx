@@ -32,9 +32,6 @@ export class MaterialApoio extends React.Component {
                         )}
                     </ul>
 
-                    {
-                        //PROVISÓRIO
-                    }
                     <BreakLine numberLines={4}/>
                     <Footer/>
                 </BodyContainer>

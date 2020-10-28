@@ -5,6 +5,7 @@ import { BodyContainer } from '../components/body/style';
 import { Label } from '../components/label/label';
 import { Footer } from '../components/footer/footer';
 import { SearchBar } from '../components/search-box/search-box';
+
 import { TitlePrinciple, SubTitle, BreakLine}  from '../components/fonts/fonts.style';
 
 import BookIcon from '../img/icons/bookIcon.png';

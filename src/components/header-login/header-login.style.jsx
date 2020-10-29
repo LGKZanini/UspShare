@@ -26,6 +26,9 @@ export const TextLoginDiv = styled.div`
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    @media(max-width: 600px) {
+        display: none;
+    }
 `;
 
 export const TextLoginSubDiv = styled.div`

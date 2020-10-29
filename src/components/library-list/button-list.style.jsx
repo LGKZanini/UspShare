@@ -8,8 +8,7 @@ export const ButtonListDiv = styled.div`
     display: flex;
     height: 40px;
     width: 80%;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 0 auto;
     justify-content: space-between;
 
     background-color: rgba(16, 148, 171, 0.8);
@@ -53,9 +52,8 @@ export const OutPutDiv = styled.div`
     color: #FFFFFF;
     transition: max-height 0.5s;
     overflow:hidden;
-    margin-left:auto;
-    margin-right:auto;
-    
+    margin: 0 auto;
+
     width: 80%;
 
     background: rgba(213, 215, 215, 0.4);

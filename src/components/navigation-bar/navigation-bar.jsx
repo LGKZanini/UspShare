@@ -3,7 +3,7 @@ import {
     NavigationDiv,
     ButtonReturn,
     TextPage
-    } from './navigation_bar.style';
+    } from './navigation-bar.style';
 
 
 export class NavigationBar extends React.Component {

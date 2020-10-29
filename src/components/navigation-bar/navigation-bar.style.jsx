@@ -7,12 +7,15 @@ export const NavigationDiv = styled.div`
     height: 60px;
     background: #1094AB;
 
+    @media(max-width: 650px) {
+        height: 80px;
+    }
 `;
 
 export const ButtonReturn = styled.button`
     width: 40px;
     height: 40px;
-    margin: auto 0;
+    margin: auto 10px;
     border: none;
     cursor: pointer;
     overflow: hidden;
@@ -29,9 +32,13 @@ export const TextPage = styled.span`
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
-    line-height: 45px;
+    font-size: 28px;
     text-align: center;
 
     color: #000000;
+    
+    @media(max-width: 1200px) {
+        font-size: 14px;
+    }
+
 `;

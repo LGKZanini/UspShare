@@ -25,12 +25,12 @@ export class MaterialApoio extends React.Component {
                     <NavigationBar pageName={pageName}/>
                     <PageStyles titulo={titulo}/>
                     <BreakLine numberLines={1}/>
-                    <ul>
+                    <div>
                         {titles.map((ti) =>
                             <ButtonList key={ti.toString()}
                                     title={ti} />
                         )}
-                    </ul>
+                    </div>
 
                     <BreakLine numberLines={4}/>
                     <Footer/>

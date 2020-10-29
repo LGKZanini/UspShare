@@ -15,6 +15,7 @@ export const LabelStarDiv = styled.div`
 `
 
 export const LabelButtonText = styled.span`
+    margin-left: 10px;
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;

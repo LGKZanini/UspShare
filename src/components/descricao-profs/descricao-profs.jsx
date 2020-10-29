@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { Fragment } from 'react';
 import iconEdge from '../../img/icons/borda.jpg'
-import {BreakLine} from '../fonts/fonts.style'
+import { BreakLine } from '../fonts/fonts.style'
 
 import {
     TextNomeProf,
@@ -10,7 +10,7 @@ import {
     NeckDescription,
     UserDescription,
     Borda
-} from './descricaoProfs.style';
+} from './descricao-profs.style';
 import Rating from '@material-ui/lab/Rating';
 
 export class DescricaoProfs extends React.Component {
@@ -27,15 +27,18 @@ export class DescricaoProfs extends React.Component {
     }
 
     render() {
+        const professorInfo = this.props.professorInfo;
+
         return (
             <div>
                 <UserDescription>
                     <Borda src ={iconEdge}/>
                     <NeckDescription>
-                        <TextNomeProf>
-                            {this.props.nomeProf}
-                        </TextNomeProf>
+                        <div>
+                            <TextNomeProf> {professorInfo.name} </TextNomeProf>
+                        </div>
                         <BreakLine numberLines={1}/>
+                        
                         <div>
                             <TextTitle>
                                 Avaliação:
@@ -48,20 +51,20 @@ export class DescricaoProfs extends React.Component {
                         </div>
                     </NeckDescription>
                 </UserDescription>
+                <BreakLine numberLines={0.25}/>
                 <BodyDescription>
-                    <p><TextTitle>
-                        Email: 
-                    </TextTitle><br/>
-                    <TextDescricao>
-                        {this.props.emailProf} 
-                    </TextDescricao><br/></p>
-                
-                    <TextTitle>
-                        Linhas de Pesquisa:
-                    </TextTitle><br/>
-                    <TextDescricao>
-                        {this.props.pesquisasProf}
-                    </TextDescricao>
+                    <TextTitle>Email: </TextTitle>
+                    <TextDescricao> {professorInfo.email} </TextDescricao>
+                    <BreakLine numberLines={0.5}/>
+                    <TextTitle> Linhas de Pesquisa: </TextTitle>
+                    <BreakLine numberLines={0.1}/>
+                    {professorInfo.pesquisas.map( (content, index) => (
+                        <Fragment key={content+index}>
+                            <TextDescricao>{content}</TextDescricao>
+                            <BreakLine numberLines={0.1}/>
+                        </Fragment>
+                    ))} 
+                    <BreakLine numberLines={4}/>
                 </BodyDescription>
             </div>
         );

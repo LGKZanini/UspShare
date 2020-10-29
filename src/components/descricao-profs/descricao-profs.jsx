@@ -64,7 +64,7 @@ export class DescricaoProfs extends React.Component {
                             <BreakLine numberLines={0.1}/>
                         </Fragment>
                     ))} 
-                    <BreakLine numberLines={4}/>
+                    <BreakLine numberLines={1}/>
                 </BodyDescription>
             </div>
         );

@@ -6,6 +6,7 @@ import { BodyContainer } from '../components/body/style';
 import { NavigationBar } from '../components/navigation-bar/navigation-bar';
 import { DescricaoProfs } from '../components/descricao-profs/descricao-profs';
 import { BreakLine } from '../components/fonts/fonts.style'
+import { Comments } from '../components/comments/comments';
 
 const pageName="Laboratório de Engenharia de software - PCS 3643 - Professores ";
 
@@ -27,7 +28,7 @@ export class AvaliacaoProfs extends React.Component {
                 <BodyContainer>
                     <NavigationBar pageName={pageName}/>
                     <DescricaoProfs professorInfo={professorInfo} />
-                    <BreakLine numberLines={1} />
+                    <Comments />
                     <Footer/>
                 </BodyContainer>
                

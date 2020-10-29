@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerLabel = styled.div`
     width: 76%;
-    height: 580px;
+    height: 280px;
 
     padding: 4% 12% 4% 12%;
     display: flex;  
@@ -11,6 +11,11 @@ export const ContainerLabel = styled.div`
     flex-wrap: wrap;
     align-items: center;
     margin: 0px 0px 40px 00px;
+    
+    @media only screen and (min-width: 828px) and (max-width: 1200px) {
+        height: 600px;
+        justify-content: center;
+    }
 
     @media(max-width: 828px) {
         height: 1300px;

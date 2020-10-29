@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FooterDiv, TextFooter } from "./style";
+import { FooterDiv, TextFooter } from "./footer.style";
 
 export class Footer extends React.Component {
 

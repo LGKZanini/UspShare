@@ -7,6 +7,7 @@ import { Entrar } from './pages/entrar';
 import { AvaliacaoProfs } from './pages/avaliacao-profs';
 import { MaterialApoio } from './pages/material-apoio';
 import { MinhasDisciplinas } from './pages/minhas-disciplinas'; 
+import { Disciplina } from './pages/disciplina';
 import {
   BrowserRouter as Router,
   Switch,
@@ -36,6 +37,7 @@ function Routes() {
               <Route path="/avaliacao-profs" component={AvaliacaoProfs} />
               <Route path="/material-apoio" component={MaterialApoio} />
               <Route path="/minhas-disciplinas" component={MinhasDisciplinas} />
+              <Route path="/disciplina" component={Disciplina} />
           </Switch>
           {entrar && <Route path="/entrar" children={<Entrar/>} />}
           {registrar && <Route path="/registrar" children={<Registrar/>} />}

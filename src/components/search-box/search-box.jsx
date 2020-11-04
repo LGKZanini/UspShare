@@ -53,7 +53,7 @@ export class SearchBar extends React.Component {
                         <ReactShadowScroll isShadow={false} scrollColor={"#FDAF2D"} scrollColorHover={"#1094AB"} >
                             <SearchBarUl>
                                 {list.map(function(item) {
-                                    return <Link to='/minhas-disciplinas'><SearchBarLi key={item}>{item}</SearchBarLi></Link>;
+                                    return <Link to='/disciplina'><SearchBarLi key={item}>{item}</SearchBarLi></Link>;
                                 })}
                             </SearchBarUl>
                         </ReactShadowScroll>

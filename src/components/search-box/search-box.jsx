@@ -8,7 +8,7 @@ import {
     SearchBarLoad,
     SearchBarUl,
     SearchBarLi
-} from "./style";
+} from "./search-box.style";
 
 import {Link} from 'react-router-dom';
 

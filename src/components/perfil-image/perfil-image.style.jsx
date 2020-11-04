@@ -5,6 +5,26 @@ export const PerfilImageDiv = styled.div`
     position: relative; 
     width: ${props => props.size*64+"px" };
     height: ${props => props.size*64+"px" };
+
+    @media only screen and (min-width: 1600px){
+        width: ${props => props.auto &&  "384px"};
+        height: ${props => props.auto &&  "384px"};
+    }
+
+    @media only screen and (min-width: 1300px) and (max-width: 1600px){
+        width: ${props => props.auto && "320px"};
+        height: ${props => props.auto && "320px"};
+    }
+
+    @media only screen and (min-width: 1060px) and (max-width: 1300px)  {
+        width: ${props => props.auto &&  "256px"};
+        height: ${props => props.auto && "256px" };
+    }
+
+    @media only screen and (max-width: 1060px)  {
+        width: ${props => props.auto &&  "192px"};
+        height: ${props => props.auto && "192px" };
+    }
 `;
 
 export const Image = styled.img`
@@ -40,4 +60,32 @@ export const PerfilRating = styled.span`
 
     left: 36%;
     top: 80%;
+
+    @media only screen and (min-width: 1600px){
+        width: ${props => props.auto &&  "120px"};
+        height: ${props => props.auto &&  "108px"};
+        font-size: ${props => props.auto && "72px" };
+        line-height: ${props => props.auto && "90px" };
+    }
+
+    @media only screen and (min-width: 1300px) and (max-width: 1600px){
+        width: ${props => props.auto &&  "100px"};
+        height: ${props => props.auto &&  "90px"};
+        font-size: ${props => props.auto && "60px" };
+        line-height: ${props => props.auto && "75px" };
+    }
+
+    @media only screen and (min-width: 1060px) and (max-width: 1300px) {
+        width: ${props => props.auto &&  "80px"};
+        height: ${props => props.auto &&  "72px"};
+        font-size: ${props => props.auto && "48px" };
+        line-height: ${props => props.auto && "60px" };
+    }
+
+    @media only screen and (max-width: 1060px) {
+        width: ${props => props.auto &&  "60px"};
+        height: ${props => props.auto &&  "54px"};
+        font-size: ${props => props.auto && "36px" };
+        line-height: ${props => props.auto && "45px" };
+    }
 `; 

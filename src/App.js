@@ -8,23 +8,17 @@ import { AvaliacaoProfs } from './pages/avaliacao-profs';
 import { MaterialApoio } from './pages/material-apoio';
 import { MinhasDisciplinas } from './pages/minhas-disciplinas'; 
 import { Disciplina } from './pages/disciplina';
-<<<<<<< HEAD
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   useLocation
 } from "react-router-dom";
-=======
-import { UserProfile } from './pages/user-profile';
-
->>>>>>> add user profile
 
 function App() {
   return (
     <>
       <CreateGlobalStyle/>
-<<<<<<< HEAD
       <Router>
         <Routes/> 
       </Router>
@@ -49,10 +43,6 @@ function Routes() {
           {registrar && <Route path="/registrar" children={<Registrar/>} />}
 
       </div>
-=======
-      <UserProfile />
-    </>
->>>>>>> add user profile
   );
 }
 

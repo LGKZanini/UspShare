@@ -25,7 +25,7 @@ export const Buttons = styled.div`
     }
 `;
 
-export const TextEntrar = styled.a`
+export const TextEntrar = styled.button`
     width: 104px;
     height: 24px;
     background: #FFFFFF;
@@ -37,7 +37,8 @@ export const TextEntrar = styled.a`
     font-weight: normal;
     font-size: 18px;
     text-align: center;
-    line-height: 21px;
+    line-height: 20px;
+    vertical-align: center;
     
     cursor: pointer;
     color: #FDAF2D;
@@ -47,16 +48,17 @@ export const TextEntrar = styled.a`
     }
 `;
 
-export const TextRegister = styled.a`
+export const TextRegister = styled.button`
     width: 104px;
     height: 24px;
     background: #FDAF2D;
+    border: 2px solid #FDAF2D;
     border-radius: 12px;
     font-family: Roboto Condensed;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 20px;
     text-align: center;
     cursor: pointer;
 

@@ -15,62 +15,73 @@ import {
     LinkDiv
 } from "./header.style";
 
+
+import {
+    Link,
+    useLocation
+  } from "react-router-dom";
+
 import { HeaderLogin } from '../header-login/header-login';
 
 
-export class Header extends React.Component {
+export const Header = (props) => {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            hideButton: true,
-        }
+    const handleButtton  = () => {
+         
     }
 
-    handleButtton  = () => {
-        this.setState({ hideButton : !this.state.hideButton })
-    }
-
-    render() {
-        return (
-            <HeaderDiv>
-                <HeaderPrimaryDiv>
-                    <ButtonHamburguerDiv>
-                        <HamburgerMenu
-                            isOpen={!this.state.hideButton}
-                            menuClicked={this.handleButtton}
-                            width={24}
-                            height={18}
-                            strokeWidth={2}
-                            rotate={0}
-                            color='#FDAF2D'
-                            borderRadius={0}
-                            animationDuration={0.5}
-                        />
-                    </ButtonHamburguerDiv>
-                    <Logo>
-                        <img src={logo} alt="logo"></img>
-                    </Logo>
-                    { this.props.isLogged
-                    ? (
-                        <HeaderLogin/>
-                    )
-                    : (
-                        <Buttons>
-                            <TextEntrar> Entrar </TextEntrar>
-                            <TextRegister> Registar </TextRegister>
-                        </Buttons>
-                    )}
-                </HeaderPrimaryDiv>
-                <HeaderSubDiv hide={this.state.hideButton}>
-                    <LinkDiv>
-                        <LinkHeader>Entrar</LinkHeader>
-                    </LinkDiv>
-                    <LinkDiv>
-                        <LinkHeader>Registrar</LinkHeader>
-                    </LinkDiv>
-                </HeaderSubDiv>
-            </HeaderDiv>
-        );
-    };
+    
+    let location = useLocation();
+    return (
+        <HeaderDiv>
+            <HeaderPrimaryDiv>
+                <ButtonHamburguerDiv>
+                    <HamburgerMenu
+                        isOpen={false}
+                        menuClicked={ handleButtton}
+                        width={24}
+                        height={18}
+                        strokeWidth={2}
+                        rotate={0}
+                        color='#FDAF2D'
+                        borderRadius={0}
+                        animationDuration={0.5}
+                    />
+                </ButtonHamburguerDiv>
+                <Logo>
+                    <img src={logo} alt="logo"></img>
+                </Logo>
+                {  props.isLogged
+                ? (
+                    <HeaderLogin/>
+                )
+                : (
+                    <Buttons>
+                        <Link to={{
+                                pathname: `/entrar`,
+                                state: { entrar: location }
+                            }}>
+                                <TextEntrar> Entrar </TextEntrar>
+                        </Link>
+                        <Link to={{
+                                pathname: `/registrar`,
+                                state: { registrar: location }
+                            }}
+                        >
+                            <TextRegister> Registrar </TextRegister>
+                        </Link>
+                    </Buttons>
+                )}
+            </HeaderPrimaryDiv>
+            <HeaderSubDiv hide={ true}>
+                <LinkDiv>
+                    <LinkHeader>Entrar</LinkHeader>
+                </LinkDiv>
+                <LinkDiv>
+                    <LinkHeader>Registrar</LinkHeader>
+                </LinkDiv>
+            </HeaderSubDiv>
+        </HeaderDiv>
+    );
+    
 }

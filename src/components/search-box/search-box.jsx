@@ -10,6 +10,8 @@ import {
     SearchBarLi
 } from "./style";
 
+import {Link} from 'react-router-dom';
+
 const list = ['link1', 'link2', 'link3'];
 
 export class SearchBar extends React.Component {
@@ -51,7 +53,7 @@ export class SearchBar extends React.Component {
                         <ReactShadowScroll isShadow={false} scrollColor={"#FDAF2D"} scrollColorHover={"#1094AB"} >
                             <SearchBarUl>
                                 {list.map(function(item) {
-                                    return <SearchBarLi key={item}>{item}</SearchBarLi>;
+                                    return <Link to='/minhas-disciplinas'><SearchBarLi key={item}>{item}</SearchBarLi></Link>;
                                 })}
                             </SearchBarUl>
                         </ReactShadowScroll>

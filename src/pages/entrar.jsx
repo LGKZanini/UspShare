@@ -15,7 +15,7 @@ export  const Entrar = () =>  {
     return (
         <div>
             <div
-                onClick={back}
+                onClick={(back)}
                 style={{
                     position: "absolute",
                     top: 0,

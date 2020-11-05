@@ -8,10 +8,6 @@ import {
 
 export class PerfilImage extends React.Component {
     
-    ImagePerfilWidth = () => {
-        
-    }
-    
     render() {
         return (
             <PerfilImageDiv size={this.props.size} auto={this.props.auto}>

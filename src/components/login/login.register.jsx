@@ -14,6 +14,10 @@ import {
     ButtonEntrar
 } from "./login.style";
 
+import {
+    Link
+  } from "react-router-dom";
+
 import email from '../../img/icons/emailIcon.png';
 import password from '../../img/icons/passwordIcon.png';
 import name from '../../img/icons/nameIcon.png';
@@ -30,7 +34,7 @@ export class LoginRegister extends React.Component {
                     <BreakLine numberLines={1} />
                     <SubTitleLogin> Para continuar conectado, utilize suas credências </SubTitleLogin>
                     <BreakLine numberLines={0.4} />
-                    <RegisterButton> Entrar </RegisterButton>
+                    <Link to='./entrar'><RegisterButton> Entrar </RegisterButton></Link>
                 </LoginSignIn>
                 
                 <LoginRegisterInput>
@@ -51,7 +55,7 @@ export class LoginRegister extends React.Component {
                     <BreakLine numberLines={0.2}/>
                     <InputType img={password} type="password" placeholder="Confirmar senha"/>
                     <BreakLine numberLines={0.4}/>
-                    <ButtonEntrar> Registar </ButtonEntrar>
+                    <ButtonEntrar> Registrar </ButtonEntrar>
                 </LoginRegisterInput>
             </LoginContainer>
         );

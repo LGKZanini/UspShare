@@ -19,10 +19,9 @@ const professorInfo = {
     ],
 }
 
-export class AvaliacaoProfs extends React.Component {
-    
-    render(){
-       return (
+export const AvaliacaoProfs = () => {
+
+    return (
             <>
                 <Header isLogged={true}/>
                 <BodyContainer>
@@ -33,6 +32,5 @@ export class AvaliacaoProfs extends React.Component {
                 </BodyContainer>
                
             </>
-       ); 
-    }
+    );
 }

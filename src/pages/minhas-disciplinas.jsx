@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import { Header } from '../components/header/header';
 import { Footer } from '../components/footer/footer';
@@ -8,9 +9,6 @@ import { PageStyles } from '../components/page-styles/page-styles';
 import { ButtonList } from '../components/library-list/button-list';
 import { SearchBar } from '../components/search-box/search-box';
 import { SubTitle2, BreakLine}  from '../components/fonts/fonts.style';
-import {
-    useHistory
-  } from "react-router-dom";
 
 const pageName="Minhas Disciplinas";
 const titulo="Adicione as disciplinas do seu semestre";

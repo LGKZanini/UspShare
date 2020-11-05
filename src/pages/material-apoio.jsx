@@ -15,28 +15,26 @@ const pageName="Cálculo I  - 2453 - Material de Apoio";
 const titulo="Materiais disponíveis ";
 const titles=["Semestre Atual","Semestre 2","Semestre 3","Semestre 4"]
 
-export class MaterialApoio extends React.Component {
+export const MaterialApoio = () => {
     
-    render(){
-       return (
-            <>
-                <Header isLogged={true}/>
-                <BodyContainer>
-                    <NavigationBar pageName={pageName}/>
-                    <PageStyles titulo={titulo}/>
-                    <BreakLine numberLines={1}/>
-                    <div>
-                        {titles.map((ti) =>
-                            <ButtonList key={ti.toString()}
-                                    title={ti} />
-                        )}
-                    </div>
+    return (
+        <>
+            <Header isLogged={true}/>
+            <BodyContainer>
+                <NavigationBar pageName={pageName}/>
+                <PageStyles titulo={titulo}/>
+                <BreakLine numberLines={1}/>
+                <div>
+                    {titles.map((ti) =>
+                        <ButtonList key={ti.toString()}
+                                title={ti} />
+                    )}
+                </div>
 
-                    <BreakLine numberLines={4}/>
-                    <Footer/>
-                </BodyContainer>
-               
-            </>
-       ); 
-    }
+                <BreakLine numberLines={4}/>
+                <Footer/>
+            </BodyContainer>
+            
+        </>
+    );
 }

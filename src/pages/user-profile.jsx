@@ -14,25 +14,23 @@ const user = {
 
 const titles =["Materias Cursadas","Avaliações Recentes","Pulicações Recentes"];
 
-export class UserProfile extends React.Component {
-    
-    render(){
-       return (
-            <>
-                <Header isLogged={true}/>
-                <BodyContainer>
-                    <BreakLine numberLines={1}/>
-                    <UserProfileName user={user} />
-                    <BreakLine numberLines={1}/>
-                    {titles.map((ti) =>
-                        <ButtonList key={ti.toString()}
-                                title={ti} />
-                    )}
-                    <BreakLine numberLines={1}/>
-                    <Footer/>
-                </BodyContainer>
-               
-            </>
-       ); 
-    }
+export const UserProfile = () => {
+
+    return (
+        <>
+            <Header isLogged={true}/>
+            <BodyContainer>
+                <BreakLine numberLines={1}/>
+                <UserProfileName user={user} />
+                <BreakLine numberLines={1}/>
+                {titles.map((ti) =>
+                    <ButtonList key={ti.toString()}
+                            title={ti} />
+                )}
+                <BreakLine numberLines={1}/>
+                <Footer/>
+            </BodyContainer>
+            
+        </>
+    ); 
 }

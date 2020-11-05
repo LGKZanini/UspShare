@@ -36,7 +36,7 @@ export class ButtonList extends React.Component {
                 </ButtonSimpleDiv>
             </ButtonListDiv>
             <OutPutDiv hide={this.state.click}>
-                <LabelRenderList contetList={contetList} isTrash={false} />
+                <LabelRenderList contetList={contetList} isTrash={this.props.isTrash} />
             </OutPutDiv>
         </div>
         );

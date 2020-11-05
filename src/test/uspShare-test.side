@@ -1,0 +1,92 @@
+{
+  "id": "99672559-ae5f-40f7-8296-8ed3584dfe54",
+  "version": "2.0",
+  "name": "uspShare-test",
+  "url": "http://localhost:3000/",
+  "tests": [{
+    "id": "188280db-527c-4acf-878b-b8b38eb088a5",
+    "name": "Test-Responsive",
+    "commands": [{
+      "id": "9fcd65e2-1e4a-41c5-a278-055317e813fd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15bbba4f-c1c1-47f5-b5ba-c7052c86bd8f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "300x1200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ae0cbf4-3750-4b51-bf60-01bb05c0f170",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.sc-gKAblj > div",
+      "targets": [
+        ["css=.sc-gKAblj > div", "css:finder"],
+        ["xpath=//div[@id='root']/header/header/div/div", "xpath:idRelative"],
+        ["xpath=//header/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c7b29a3-ed77-45f8-9ceb-76ad088f2e67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-gKAblj > div",
+      "targets": [
+        ["css=.sc-gKAblj > div", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/header/div/div", "xpath:idRelative"],
+        ["xpath=//header/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0e50491-3939-4f07-82c1-68940c855a44",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.sc-ksluoS:nth-child(1) .sc-fujyUd",
+      "targets": [
+        ["css=.sc-ksluoS:nth-child(1) .sc-fujyUd", "css:finder"],
+        ["xpath=//a[contains(text(),'Entrar')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/header/div/a/div/a", "xpath:idRelative"],
+        ["xpath=//a/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18c90b46-39dd-40ad-863f-c15519e2f0de",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.sc-ksluoS:nth-child(2) .sc-fujyUd",
+      "targets": [
+        ["css=.sc-ksluoS:nth-child(2) .sc-fujyUd", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrar')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/header/div/a[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95791e18-b6de-4878-b398-3110ff1906a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-gKAblj span:nth-child(1)",
+      "targets": [
+        ["css=.sc-gKAblj span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/header/div/div/span", "xpath:idRelative"],
+        ["xpath=//header/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "fcd45d9f-63be-4021-bb95-6d263269d0f3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["188280db-527c-4acf-878b-b8b38eb088a5"]
+  }],
+  "urls": ["http://localhost:3000/", "localhost:3000", "localhost:3000/"],
+  "plugins": []
+}

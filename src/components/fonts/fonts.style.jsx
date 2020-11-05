@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const TitlePrinciple = styled.span`
     display: block;
@@ -54,4 +55,14 @@ export const BreakLine = styled.div`
 
 export const DivCenter = styled.div`
     padding: 0 45.5%;
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: inherit;
+    outline:none;
+    
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
 `;

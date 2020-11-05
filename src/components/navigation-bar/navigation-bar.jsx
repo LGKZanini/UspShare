@@ -15,7 +15,7 @@ export class NavigationBar extends React.Component {
     render() {
         return (
             <NavigationDiv>
-                <ButtonReturn/>
+                <ButtonReturn onClick={this.props.back}/>
                 <TextPage>
                     {this.props.pageName}
                 </TextPage>

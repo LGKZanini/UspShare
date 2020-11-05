@@ -30,8 +30,7 @@ export class MinhasDisciplinas extends React.Component {
                         <SearchBar />
                     <BreakLine numberLines={1}/>
                     {titles.map((ti) =>
-                        <ButtonList key={ti.toString()}
-                                title={ti} />
+                        <ButtonList key={ti.toString()} title={ti} isTrash={true}/>
                     )}
                     <BreakLine numberLines={4}/>
                     <Footer/>

@@ -1,6 +1,8 @@
-import * as React from 'react';
-import logo from '../../img/icons/uspShareIcon.png';
+import React, { useState } from 'react';
+import { useLocation } from "react-router-dom";
 import HamburgerMenu from 'react-hamburger-menu';
+
+import logo from '../../img/icons/uspShareIcon.png';
 
 import { 
     HeaderDiv,
@@ -15,29 +17,27 @@ import {
     LinkDiv
 } from "./header.style";
 
-
-import {
-    Link,
-    useLocation
-  } from "react-router-dom";
-
+import { StyledLink } from '../fonts/fonts.style';
 import { HeaderLogin } from '../header-login/header-login';
 
 
 export const Header = (props) => {
 
+    const [click, setSlick] = useState(false);
+
     const handleButtton  = () => {
-         
+        setSlick(!click);
     }
 
     
     let location = useLocation();
+
     return (
         <HeaderDiv>
             <HeaderPrimaryDiv>
                 <ButtonHamburguerDiv>
                     <HamburgerMenu
-                        isOpen={false}
+                        isOpen={click}
                         menuClicked={ handleButtton}
                         width={24}
                         height={18}
@@ -57,29 +57,40 @@ export const Header = (props) => {
                 )
                 : (
                     <Buttons>
-                        <Link to={{
+                        <StyledLink to={{
                                 pathname: `/entrar`,
                                 state: { entrar: location }
                             }}>
                                 <TextEntrar> Entrar </TextEntrar>
-                        </Link>
-                        <Link to={{
+                        </StyledLink>
+                        <StyledLink to={{
                                 pathname: `/registrar`,
                                 state: { registrar: location }
                             }}
                         >
                             <TextRegister> Registrar </TextRegister>
-                        </Link>
+                        </StyledLink>
                     </Buttons>
                 )}
             </HeaderPrimaryDiv>
-            <HeaderSubDiv hide={ true}>
-                <LinkDiv>
-                    <LinkHeader>Entrar</LinkHeader>
-                </LinkDiv>
-                <LinkDiv>
-                    <LinkHeader>Registrar</LinkHeader>
-                </LinkDiv>
+            <HeaderSubDiv hide={!click}>
+                <StyledLink to={{
+                                pathname: `/entrar`,
+                                state: { entrar: location }
+                            }}>
+                    <LinkDiv>
+                        <LinkHeader>Entrar</LinkHeader>
+                    </LinkDiv>
+                </StyledLink>
+                <StyledLink to={{
+                                pathname: `/registrar`,
+                                state: { registrar: location }
+                            }}
+                        >
+                    <LinkDiv>
+                        <LinkHeader>Registrar</LinkHeader>
+                    </LinkDiv>
+                </StyledLink>
             </HeaderSubDiv>
         </HeaderDiv>
     );

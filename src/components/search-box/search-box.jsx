@@ -8,11 +8,24 @@ import {
     SearchBarLoad,
     SearchBarUl,
     SearchBarLi
-} from "./style";
+} from "./search-box.style";
 
-import {Link} from 'react-router-dom';
+import { StyledLink } from '../fonts/fonts.style';
 
-const list = ['link1', 'link2', 'link3'];
+const list = [
+    {
+        materia: 'Laboratório de engenharia de software', 
+        siglaDisciplina: 'PCS3443'
+    }, 
+    {
+        materia: 'Laboratório eletrônica',
+        siglaDisciplina: 'PSI3032',
+    },
+    {  
+        materia: 'Laboratório circuitos',
+        siglaDisciplina: 'PSI3031'
+    }
+];
 
 export class SearchBar extends React.Component {
 
@@ -53,7 +66,18 @@ export class SearchBar extends React.Component {
                         <ReactShadowScroll isShadow={false} scrollColor={"#FDAF2D"} scrollColorHover={"#1094AB"} >
                             <SearchBarUl>
                                 {list.map(function(item) {
-                                    return <Link to='/disciplina'><SearchBarLi key={item}>{item}</SearchBarLi></Link>;
+                                    return (
+                                        <React.Fragment key={item.siglaDisciplina+item.materia}>
+                                            <StyledLink 
+                                                to={{
+                                                    pathname: '/disciplina/'+item.siglaDisciplina,
+                                                    state: { nomeDisciplina: item.materia }
+                                                }}
+                                            >
+                                                <SearchBarLi >{item.materia}</SearchBarLi>
+                                            </StyledLink>
+                                        </React.Fragment>
+                                    );
                                 })}
                             </SearchBarUl>
                         </ReactShadowScroll>

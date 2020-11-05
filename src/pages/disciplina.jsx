@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLocation, useHistory } from "react-router-dom";
 
 import { Header } from '../components/header/header';
 import { BodyContainer } from '../components/body/style';
 import { Label } from '../components/label/label';
 import { Footer } from '../components/footer/footer';
-import { SearchBar } from '../components/search-box/search-box';
 import { Comments } from '../components/comments/comments';
 import { NavigationBar } from '../components/navigation-bar/navigation-bar';
 
@@ -23,6 +23,7 @@ const contentLabel = [
         titleMessage: "Materias De Apoio",
         subMessage: "Confira o material fornecido por alunos que já cursaram a disciplina ou que estão cursando",
         iconUrl: BookIcon,
+        redirectUrl: "/material-apoio",
     },
     {
         titleMessage: "Cronogramas",
@@ -33,42 +34,46 @@ const contentLabel = [
         titleMessage: "Oferecimentos",
         subMessage: "Comentários sobre a diferença entre a metodologia de ensino dos professores que dão a matéria.",
         iconUrl: OferecimentoIcon,
+        redirectUrl: "/avaliacao-profs",
     },
     
 ]
 
-const pageName="Cálculo 4";
+export const Disciplina = (props) => {
 
-export class Disciplina extends React.Component {
-    
-    constructor(props){
-        super(props);
-        this.state = {
-            rating: 5 // VALOR MOCKADO
-        }
-    }
+    const [rating, setRating] = useState(5);
+    let location = useLocation();
+    let history = useHistory();
 
-    render(){
-       return (
+    const pageName = location.state.nomeDisciplina;
+    let back = e => {
+        e.stopPropagation();
+        history.goBack();
+    };
+
+    const handleChange = ( event, newValue) => {
+        setRating(newValue);
+    };
+
+    return (
             <>
-                <Header/>
+                <Header isLogged={true}/>
                 <BodyContainer>
-                    <NavigationBar pageName={pageName}/>
+                    <NavigationBar pageName={pageName} back={back}/>
                     <BreakLine numberLines={1}/>
                     <TitlePrinciple>Dificuldade</TitlePrinciple>
                     <DivCenter>
                         <Rating
-                            name={this.props.index}
-                            value={this.state.rating}
-                            onChange={ this.handleChange }
+                            name={props.index}
+                            value={rating}
+                            onChange={handleChange}
                         />
                     </DivCenter>
                     <SubTitle3> Avaliações: 102</SubTitle3>
-                    <Label labelContent={contentLabel}/>
+                    <Label labelContent={contentLabel} pageName={pageName}/>
                     <Comments />
                     <Footer/>
                 </BodyContainer>
             </>
-       ); 
-    }
+    );
 }

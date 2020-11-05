@@ -25,8 +25,7 @@ export class UserProfile extends React.Component {
                     <UserProfileName user={user} />
                     <BreakLine numberLines={1}/>
                     {titles.map((ti) =>
-                        <ButtonList key={ti.toString()}
-                                title={ti} />
+                        <ButtonList key={ti.toString()} title={ti} />
                     )}
                     <BreakLine numberLines={1}/>
                     <Footer/>

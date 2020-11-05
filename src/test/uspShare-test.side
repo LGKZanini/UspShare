@@ -31,6 +31,52 @@
         ["xpath=//header/div/div", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "5c7b29a3-ed77-45f8-9ceb-76ad088f2e67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-gKAblj > div",
+      "targets": [
+        ["css=.sc-gKAblj > div", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/header/div/div", "xpath:idRelative"],
+        ["xpath=//header/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0e50491-3939-4f07-82c1-68940c855a44",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.sc-ksluoS:nth-child(1) .sc-fujyUd",
+      "targets": [
+        ["css=.sc-ksluoS:nth-child(1) .sc-fujyUd", "css:finder"],
+        ["xpath=//a[contains(text(),'Entrar')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/header/div/a/div/a", "xpath:idRelative"],
+        ["xpath=//a/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18c90b46-39dd-40ad-863f-c15519e2f0de",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.sc-ksluoS:nth-child(2) .sc-fujyUd",
+      "targets": [
+        ["css=.sc-ksluoS:nth-child(2) .sc-fujyUd", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrar')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/header/div/a[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95791e18-b6de-4878-b398-3110ff1906a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-gKAblj span:nth-child(1)",
+      "targets": [
+        ["css=.sc-gKAblj span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/header/div/div/span", "xpath:idRelative"],
+        ["xpath=//header/div/div/span", "xpath:position"]
+      ],
+      "value": ""
     }]
   }],
   "suites": [{

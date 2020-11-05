@@ -38,7 +38,7 @@ function Routes() {
               <Route path="/avaliacao-profs" component={AvaliacaoProfs} />
               <Route path="/material-apoio" component={MaterialApoio} />
               <Route path="/minhas-disciplinas" component={MinhasDisciplinas} />
-              <Route path="/disciplina" component={Disciplina} />
+              <Route path="/disciplina/:oferecimento" component={Disciplina} />
               <Route path="/userProfile" component={UserProfile} />
           </Switch>
           {entrar && <Route path="/entrar" children={<Entrar/>} />}

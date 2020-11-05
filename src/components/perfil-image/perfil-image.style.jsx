@@ -6,12 +6,7 @@ export const PerfilImageDiv = styled.div`
     width: ${props => props.size*64+"px" };
     height: ${props => props.size*64+"px" };
 
-    @media only screen and (min-width: 1600px){
-        width: ${props => props.auto &&  "384px"};
-        height: ${props => props.auto &&  "384px"};
-    }
-
-    @media only screen and (min-width: 1300px) and (max-width: 1600px){
+    @media only screen  and (min-width: 1300px){
         width: ${props => props.auto && "320px"};
         height: ${props => props.auto && "320px"};
     }
@@ -33,7 +28,7 @@ export const Image = styled.img`
 
     border-style: solid;
     border-color: #FDAF2D;
-    border-width: 4px;
+    border-width: ${props => props.auto ? "8px" : "4px" };
 
     border-radius: 50%;
 `;
@@ -55,20 +50,15 @@ export const PerfilRating = styled.span`
 
     border-style: solid;
     border-color: #FDAF2D;
-    border-width: 3.5px;
+    border-width: ${props => props.auto ? "8px" : "4px" };
     border-radius: 50%;
 
     left: 36%;
     top: 80%;
 
-    @media only screen and (min-width: 1600px){
-        width: ${props => props.auto &&  "120px"};
-        height: ${props => props.auto &&  "108px"};
-        font-size: ${props => props.auto && "72px" };
-        line-height: ${props => props.auto && "90px" };
-    }
 
-    @media only screen and (min-width: 1300px) and (max-width: 1600px){
+
+    @media only screen and  (min-width: 1300px){
         width: ${props => props.auto &&  "100px"};
         height: ${props => props.auto &&  "90px"};
         font-size: ${props => props.auto && "60px" };

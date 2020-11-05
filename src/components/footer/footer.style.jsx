@@ -19,4 +19,12 @@ export const TextFooter = styled.span`
     font-size: 28px;
     line-height: 35px;
     color: #FFFFFF;
+
+    @media only screen and (min-width: 1060px) and (max-width: 1300px) {
+        font-size: 24px;
+    }
+
+    @media only screen and (max-width: 1060px) {
+        font-size: 20px;
+    }
 `;

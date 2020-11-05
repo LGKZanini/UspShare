@@ -15,7 +15,7 @@ import CalendarIcon from '../img/icons/calendarIcon.png';
 import OferecimentoIcon from '../img/icons/oferecimentoIcon.png';
 
 import Rating from '@material-ui/lab/Rating';
-
+import { useHistory } from "react-router-dom";
 
 
 const contentLabel = [
@@ -39,28 +39,28 @@ const contentLabel = [
 
 const pageName="Cálculo 4";
 
-export class Disciplina extends React.Component {
+export const Disciplina = (props) => {
     
-    constructor(props){
-        super(props);
-        this.state = {
-            rating: 5 // VALOR MOCKADO
-        }
-    }
+    let history = useHistory();
+    let back = e => {
+        e.stopPropagation();
+        history.goBack();
+    };
 
-    render(){
-       return (
+    console.log("history = ",history);
+
+    return (
             <>
                 <Header/>
                 <BodyContainer>
-                    <NavigationBar pageName={pageName}/>
+                    <NavigationBar pageName={pageName} back={back} />
                     <BreakLine numberLines={1}/>
                     <TitlePrinciple>Dificuldade</TitlePrinciple>
                     <DivCenter>
                         <Rating
-                            name={this.props.index}
-                            value={this.state.rating}
-                            onChange={ this.handleChange }
+                            name={props.index}
+                            value={5}
+                            onChange={ () => console.log('test') }
                         />
                     </DivCenter>
                     <SubTitle3> Avaliações: 102</SubTitle3>
@@ -69,6 +69,5 @@ export class Disciplina extends React.Component {
                     <Footer/>
                 </BodyContainer>
             </>
-       ); 
-    }
+    ); 
 }

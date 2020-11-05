@@ -31,6 +31,7 @@ function Routes() {
   let location = useLocation();
   let  registrar = location.state && location.state.registrar;
   let  entrar = location.state && location.state.entrar;
+
   return (
       <div>
           <Switch location={ registrar || entrar || location }>

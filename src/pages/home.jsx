@@ -13,6 +13,7 @@ import ComputerIcon from '../img/icons/computerIcon.png';
 import likeIcon from '../img/icons/likeIcon.png';
 import MedalhaIcon from '../img/icons/medalhaIcon.png';
 
+import { useHistory } from "react-router-dom";
 
 const contentLabel = [
     {
@@ -38,10 +39,9 @@ const contentLabel = [
 ]
 
 
-export class Home extends React.Component {
-    
-    render(){
-       return (
+export const Home = () => {
+   
+    return (
             <>
                 <Header/>
                 <BodyContainer>
@@ -55,6 +55,5 @@ export class Home extends React.Component {
                     <Footer/>
                 </BodyContainer>
             </>
-       ); 
-    }
+    );
 }

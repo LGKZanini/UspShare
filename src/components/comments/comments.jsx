@@ -93,13 +93,18 @@ export class Comments extends React.Component {
     }
 
     render() {
+
+        if(this.props.loading || this.props?.commentsSection === undefined || this.props.commentsSection === null){
+            return (<></>);
+        }
+
         return (
             <CommentsSection>
                 <BreakLine numberLines={0.5}/>
                 <SubTitle>Comentários</SubTitle>
                 <BreakLine numberLines={1}/>
-                {commentsSection.map(({commentMain, subsComment, index}) => (   
-                        <Fragment key={commentMain.name+commentMain.ranking+index}>  
+                {this.props.commentsSection.map(({commentMain, subsComment, index}) => (  
+                        <Fragment key={commentMain.name+commentMain.ranking+index}>
                             <CommentSection user={commentMain} />
                             <BreakLine numberLines={0.5}/>
                             <CommentsRenderList subsComment={subsComment}/>

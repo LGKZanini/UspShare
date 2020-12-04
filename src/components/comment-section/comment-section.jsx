@@ -18,12 +18,14 @@ export class CommentSection extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            votes: 15,
             isVisible: false,
         }
     }
 
     render() {
+        if(this.props.user?.ranking === undefined){
+            return (<></>);
+        }
         return (
             <CommentDiv isSubComment={this.props.isSubComment}>
                 <ImageDiv>
@@ -32,7 +34,7 @@ export class CommentSection extends React.Component {
                     </PerfilImageDiv>
                     <div>
                         <ButtonTop isTop={true}/>
-                        <VoteText> {this.state.votes} </VoteText>
+                        <VoteText> {this.props.user.ratingComment} </VoteText>
                         <ButtonTop isTop={false}/>
                     </div>
                 </ImageDiv>

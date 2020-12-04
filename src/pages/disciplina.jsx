@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { requestAxios, api } from '../http/axios-http';
+import { CommentsModel } from '../models/comments.models';
+
 import { useLocation, useHistory } from "react-router-dom";
 
 import { Header } from '../components/header/header';
@@ -42,6 +46,9 @@ const contentLabel = [
 export const Disciplina = (props) => {
 
     const [rating, setRating] = useState(5);
+    const [commentsSection, setCommentsSection] = useState(null);
+    const [loading, setLoading] = useState(false);
+
     let location = useLocation();
     let history = useHistory();
 
@@ -54,6 +61,26 @@ export const Disciplina = (props) => {
     const handleChange = ( event, newValue) => {
         setRating(newValue);
     };
+
+    const handleRequestAxios = async () => {
+        try{
+            setLoading(true);
+            const answer = await requestAxios({
+                url: api+'/comentarios/MAC3116',
+                method: 'get'
+            });
+            setCommentsSection(CommentsModel(answer.body));            
+            setLoading(false);
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        handleRequestAxios();
+    }, []);
+    
+
 
     return (
             <>
@@ -71,7 +98,7 @@ export const Disciplina = (props) => {
                     </DivCenter>
                     <SubTitle3> Avaliações: 102</SubTitle3>
                     <Label labelContent={contentLabel} pageName={pageName}/>
-                    <Comments />
+                    <Comments loading={loading} commentsSection={commentsSection} />
                     <Footer/>
                 </BodyContainer>
             </>

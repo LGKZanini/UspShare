@@ -30,7 +30,7 @@ export class CommentSection extends React.Component {
             <CommentDiv isSubComment={this.props.isSubComment}>
                 <ImageDiv>
                     <PerfilImageDiv>
-                        <PerfilImage size={1} ranking={this.props.user.ranking}/>
+                        <PerfilImage imageUrl={this.props.user.imageUrl} size={1} ranking={this.props.user.ranking}/>
                     </PerfilImageDiv>
                     <div>
                         <ButtonTop isTop={true}/>

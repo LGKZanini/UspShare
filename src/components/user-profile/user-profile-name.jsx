@@ -23,18 +23,22 @@ export class UserProfileName extends React.Component {
     }
 
     render() {
+        if(this.props.loading || this.props.user === undefined || this.props.user === null){
+            return null;
+        }
+
         return (
             <>
                 <ContainerUser>
                     <CenterDiv>
-                        <PerfilImage auto={true} size={3} ranking={50}/>
+                        <PerfilImage imageUrl={this.props.user.imageUrl} auto={true} size={3} ranking={50}/>
                     </CenterDiv>
                     <WrapDiv>
                         <CenterDiv>
-                            <TitleName> Mateus Souza </TitleName>
-                            <DisciplineName> Engenharia Elétrica </DisciplineName>
-                            <AvaliationsTitle> Numero de avaliações: {this.props.user.avaliations}</AvaliationsTitle>
-                            <AvaliationsTitle> Conteúdos Acessados: {this.props.user.acess}</AvaliationsTitle>
+                            <TitleName> {this.props.user.name} </TitleName>
+                            <DisciplineName> {this.props.user.curso} </DisciplineName>
+                            <AvaliationsTitle> Numero de avaliações: 250</AvaliationsTitle>
+                            <AvaliationsTitle> Conteúdos Acessados: 406 </AvaliationsTitle>
                         </CenterDiv>
                         <CenterDiv>
                             <ButtonFollow> Seguir</ButtonFollow>
@@ -45,15 +49,15 @@ export class UserProfileName extends React.Component {
                 <InformationDiv>
                     <InformationSubDiv>
                         <DisciplineName> Publicações</DisciplineName>
-                        <TitleAchievement> 256 </TitleAchievement>
+                        <TitleAchievement> {this.props.user.publicacoes} </TitleAchievement>
                     </InformationSubDiv>
                     <InformationSubDiv>
                         <DisciplineName> Seguidores</DisciplineName>
-                        <TitleAchievement> 406 </TitleAchievement>
+                        <TitleAchievement> {this.props.user.seguidores} </TitleAchievement>
                     </InformationSubDiv>
                     <InformationSubDiv>
                         <DisciplineName> Seguindo</DisciplineName>
-                        <TitleAchievement> 310 </TitleAchievement>
+                        <TitleAchievement> {this.props.user.seguindo} </TitleAchievement>
                     </InformationSubDiv>
                 </InformationDiv>
             </>

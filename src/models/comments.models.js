@@ -4,12 +4,12 @@ export const CommentsModel = (body) => {
 
     const bodyCommentsPrimary = body.filter(comentario => comentario.id_comentario_primario === null);
     const bodySubComments =  body.filter(comentario => comentario.id_comentario_primario !== null);
-
+    console.log(bodyCommentsPrimary);
     const answer = bodyCommentsPrimary.map((comentario) => ({
             id: Number(comentario.id),
             name: comentario.nome,
             ranking: 50,
-            imageURL: '',
+            imageUrl: comentario.imageUrl,
             comment: comentario.mensagem,
             ratingComment: comentario.nota,
             perfilUrl: ''
@@ -25,7 +25,7 @@ export const CommentsModel = (body) => {
                 id: Number(comentario.id),
                 name: comentario.nome,
                 ranking: 50,
-                imageURL: '',
+                imageURL: comentario.imageUrl,
                 comment: comentario.mensagem,
                 ratingComment: comentario.nota,
                 perfilUrl: ''

@@ -39,7 +39,7 @@ function Routes() {
               <Route path="/material-apoio" component={MaterialApoio} />
               <Route path="/minhas-disciplinas" component={MinhasDisciplinas} />
               <Route path="/disciplina/:oferecimento" component={Disciplina} />
-              <Route path="/userProfile" component={UserProfile} />
+              <Route path="/userProfile/:userID" component={UserProfile} />
           </Switch>
           {entrar && <Route path="/entrar" children={<Entrar/>} />}
           {registrar && <Route path="/registrar" children={<Registrar/>} />}

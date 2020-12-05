@@ -53,6 +53,8 @@ export const Disciplina = (props) => {
     let history = useHistory();
 
     const pageName = location.state.nomeDisciplina;
+    const codigoDisciplina = props.match.params.oferecimento;
+
     let back = e => {
         e.stopPropagation();
         history.goBack();
@@ -66,7 +68,7 @@ export const Disciplina = (props) => {
         try{
             setLoading(true);
             const answer = await requestAxios({
-                url: api+'/comentarios/MAC3116',
+                url: api+'/comentarios/'+codigoDisciplina,
                 method: 'get'
             });
             setCommentsSection(CommentsModel(answer.body));            
@@ -80,7 +82,7 @@ export const Disciplina = (props) => {
         handleRequestAxios();
     }, []);
     
-
+    console.log(commentsSection);
 
     return (
             <>

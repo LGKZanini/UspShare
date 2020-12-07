@@ -6,7 +6,7 @@ import {
     LoadMoreButton,
     LoadMoreButtonDiv,
  } from "./comments.style";
-import { SubTitle, BreakLine } from '../fonts/fonts.style';
+import { SubTitle,SubTitle2, BreakLine } from '../fonts/fonts.style';
 import { CommentSection } from '../comment-section/comment-section';
 import { CommentsRenderList } from '../comment-render-list/comment-render-list';
 import { CommentInput } from '../comment-input/comment-input';
@@ -93,17 +93,17 @@ export class Comments extends React.Component {
     }
 
     render() {
-
-        if(this.props.loading || this.props?.commentsSection === undefined || this.props.commentsSection === null){
-            return (<></>);
-        }
-
+        const render = ( this.props?.loading  || this.props?.commentsSection === undefined || this.props.commentsSection === null);
         return (
             <CommentsSection>
                 <BreakLine numberLines={0.5}/>
                 <SubTitle>Comentários</SubTitle>
                 <BreakLine numberLines={1}/>
-                {this.props.commentsSection.map(({commentMain, subsComment, index}) => (  
+                {render ? (
+                    this.props?.loading ? ( <></> )
+                    : ( <SubTitle2>Seja o primeiro a comentar</SubTitle2> )
+                ) : (     
+                this.props.commentsSection.map(({commentMain, subsComment, index}) => (  
                         <Fragment key={commentMain.name+commentMain.ranking+index}>
                             <CommentSection user={commentMain} />
                             <BreakLine numberLines={0.5}/>
@@ -112,11 +112,13 @@ export class Comments extends React.Component {
                             <HrSection/>
                             <BreakLine numberLines={0.25}/>
                         </Fragment>
-                    )
+                    ))
                 )}
-                <LoadMoreButtonDiv>
-                    <LoadMoreButton>Carregar Mais</LoadMoreButton>
-                </LoadMoreButtonDiv>
+                {render ? (null) : (
+                    <LoadMoreButtonDiv>
+                        <LoadMoreButton>Carregar Mais</LoadMoreButton>
+                    </LoadMoreButtonDiv>
+                )}
                 <BreakLine numberLines={0.25}/>
                 <CommentInput />
                 <BreakLine numberLines={1}/>

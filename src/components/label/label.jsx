@@ -11,13 +11,21 @@ import { StyledLink } from '../fonts/fonts.style';
 
 export class Label extends React.Component {
 
+    codigoDisciplina = (isAvaliacao) => {
+        if(isAvaliacao){
+            return '/'+this.props.codigoDisciplina;
+        }
+        return '';
+    }
+
     render() {
         return (
             <ContainerLabel>
                 {this.props.labelContent.map((content, index) => content?.redirectUrl
                     ?  (<Fragment key={index+content.titleMessage}>
                         <StyledLink to={{ 
-                            pathname: content?.redirectUrl
+                            pathname: content?.redirectUrl+this.codigoDisciplina(content?.isAvaliacao),
+                            state: { nomeDisciplina: this.props.pageName }
                         }}>
                             <LabelDiv>
                                 <LabelTitle>{content.titleMessage}</LabelTitle>

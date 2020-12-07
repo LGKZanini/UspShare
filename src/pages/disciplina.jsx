@@ -39,6 +39,7 @@ const contentLabel = [
         subMessage: "Comentários sobre a diferença entre a metodologia de ensino dos professores que dão a matéria.",
         iconUrl: OferecimentoIcon,
         redirectUrl: "/avaliacao-profs",
+        isAvaliacao: true,
     },
     
 ]
@@ -71,7 +72,7 @@ export const Disciplina = (props) => {
                 url: api+'/comentarios/'+codigoDisciplina,
                 method: 'get'
             });
-            setCommentsSection(CommentsModel(answer.body));            
+            setCommentsSection(CommentsModel(answer.body, answer.statusCode));            
             setLoading(false);
         }catch(error){
             console.log(error);
@@ -81,8 +82,6 @@ export const Disciplina = (props) => {
     useEffect(() => {
         handleRequestAxios();
     }, []);
-    
-    console.log(commentsSection);
 
     return (
             <>
@@ -99,8 +98,8 @@ export const Disciplina = (props) => {
                         />
                     </DivCenter>
                     <SubTitle3> Avaliações: 102</SubTitle3>
-                    <Label labelContent={contentLabel} pageName={pageName}/>
-                    <Comments loading={loading} commentsSection={commentsSection} />
+                    <Label labelContent={contentLabel} pageName={pageName} codigoDisciplina={codigoDisciplina}/>
+                    <Comments loading={loading} commentsSection={commentsSection}/>
                     <Footer/>
                 </BodyContainer>
             </>

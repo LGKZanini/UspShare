@@ -6,7 +6,7 @@ import { Label } from '../components/label/label';
 import { Footer } from '../components/footer/footer';
 import { SearchBar } from '../components/search-box/search-box';
 
-import { TitlePrinciple, SubTitle, BreakLine}  from '../components/fonts/fonts.style';
+import { TitlePrinciple, SubTitle, BreakLine } from '../components/fonts/fonts.style';
 
 import BookIcon from '../img/icons/bookIcon.png';
 import ComputerIcon from '../img/icons/computerIcon.png';
@@ -39,22 +39,22 @@ const contentLabel = [
 
 
 export class Home extends React.Component {
-    
-    render(){
-       return (
+
+    render() {
+        return (
             <>
-                <Header/>
+                <Header />
                 <BodyContainer>
-                    <BreakLine numberLines={1}/>
+                    <BreakLine numberLines={1} />
                     <TitlePrinciple>Conheça o USP share</TitlePrinciple>
                     <TitlePrinciple>O melhor site para consulta de material da USP</TitlePrinciple>
-                    <BreakLine numberLines={2}/>
+                    <BreakLine numberLines={2} />
                     <SubTitle>Faça uma busca pela disciplina que deseja</SubTitle>
                     <SearchBar />
-                    <Label labelContent={contentLabel}/>
-                    <Footer/>
+                    <Label labelContent={contentLabel} />
+                    <Footer />
                 </BodyContainer>
             </>
-       ); 
+        );
     }
 }

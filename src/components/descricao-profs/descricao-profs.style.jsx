@@ -30,11 +30,13 @@ export const BodyDescription = styled.div`
 `;
 
 export const NeckDescription = styled.div`
-    margin: 4%;
+    margin-left: 40px;
+    margin-top: 8px;
     color: #000000;
 `;
 
 export const UserDescription = styled.div`
+    margin-top: 20px;
     margin-left: 12%;
     display: flex;
     flex-wrap: wrap;

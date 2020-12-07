@@ -1,6 +1,10 @@
 
 
-export const CommentsModel = (body) => {
+export const CommentsModel = (body, status) => {
+
+    if(status === 404){
+        return null;
+    }
 
     const bodyCommentsPrimary = body.filter(comentario => comentario.id_comentario_primario === null);
     const bodySubComments =  body.filter(comentario => comentario.id_comentario_primario !== null);

@@ -28,6 +28,7 @@ const contentLabel = [
         subMessage: "Confira o material fornecido por alunos que já cursaram a disciplina ou que estão cursando",
         iconUrl: BookIcon,
         redirectUrl: "/material-apoio",
+        isAvaliacao: true,
     },
     {
         titleMessage: "Cronogramas",

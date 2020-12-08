@@ -36,7 +36,7 @@ function Routes() {
           <Switch location={ registrar || entrar || location }>
               <Route exact path="/" component={Home} />
               <Route path="/avaliacao-profs/:codigoDisciplina" component={AvaliacaoProfs} />
-              <Route path="/material-apoio" component={MaterialApoio} />
+              <Route path="/material-apoio/:codigoDisciplina" component={MaterialApoio} />
               <Route path="/minhas-disciplinas" component={MinhasDisciplinas} />
               <Route path="/disciplina/:oferecimento" component={Disciplina} />
               <Route path="/userProfile/:userID" component={UserProfile} />

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Rating from '@material-ui/lab/Rating';
+import styled from 'styled-components';
 import { 
     LabelStarDiv, 
     LabelButtonText,
@@ -12,6 +13,11 @@ import {
     NameUserContent 
 } from './library-star.style';
 
+const A = styled.a`
+    cursor: pointer;
+    text-decoration: none;
+    color: none;
+`;
 export class LabelStarList extends React.Component {
 
     constructor(props){
@@ -30,7 +36,16 @@ export class LabelStarList extends React.Component {
             <LabelStarDiv>
                 <LabelButtonTextDiv>
                     <LabelButtonCenterDiv>
-                        <LabelButtonText> { this.props.text } </LabelButtonText>
+                        {
+                            this.props?.url !== undefined 
+                            ? (<A href={this.props.url} download>
+                                <LabelButtonText> { this.props.text } </LabelButtonText>
+                              </A>
+                              )
+                            : (
+                            <LabelButtonText> {'fodae?'+ this.props.text } </LabelButtonText>
+                            )
+                        }
                     </LabelButtonCenterDiv>
                 </LabelButtonTextDiv>
                 <LabelDateStarDiv>

@@ -24,6 +24,7 @@ export class LabelRenderList extends React.Component {
                                 date={content.date} 
                                 userName={content.userName}
                                 votes={content.votes}
+                                url={content.url}
                             />
                         </Fragment>
                     ) )

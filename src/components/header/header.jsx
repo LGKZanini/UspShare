@@ -48,9 +48,15 @@ export const Header = (props) => {
                         animationDuration={0.5}
                     />
                 </ButtonHamburguerDiv>
-                <Logo>
-                    <img src={logo} alt="logo"></img>
-                </Logo>
+                <StyledLink 
+                    to={{
+                        pathname: `/`
+                    }}
+                >
+                    <Logo>
+                        <img src={logo} alt="logo"></img>
+                    </Logo>
+                </StyledLink>
                 {  props.isLogged
                 ? (
                     <HeaderLogin/>

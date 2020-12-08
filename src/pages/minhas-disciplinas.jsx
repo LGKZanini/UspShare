@@ -23,7 +23,6 @@ export class MinhasDisciplinas extends React.Component {
             <>
                 <Header isLogged={true}/>
                 <BodyContainer>
-                    <NavigationBar pageName={pageName}/>
                     <PageStyles titulo={titulo}/>
                     <SubTitle2>Clique no semestre que deseja adicionar uma disciplina</SubTitle2>
                     <BreakLine numberLines={1}/>

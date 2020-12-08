@@ -44,11 +44,7 @@ export const UserProfile = (props) => {
             <BodyContainer>
                 <BreakLine numberLines={1}/>
                 <UserProfileName user={user} loading={loading} />
-                <BreakLine numberLines={1}/>
-                {titles.map((ti) =>
-                    <ButtonList key={ti.toString()} title={ti} />
-                )}
-                <BreakLine numberLines={1}/>
+                <BreakLine numberLines={2}/>
                 <Footer/>
             </BodyContainer>
         </>

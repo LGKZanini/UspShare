@@ -43,7 +43,7 @@ export const LabelDateStarDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 260px;
+    width: 320px;
 
 
     @media(max-width: 600px) {
@@ -58,6 +58,8 @@ export const DateContent = styled.span`
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
+    margin-left:4px;
+    margin-right: 4px;
 `;
 
 export const NameUserContent = styled.span`

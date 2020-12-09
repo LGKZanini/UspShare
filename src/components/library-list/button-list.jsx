@@ -4,9 +4,9 @@ import { ButtonListDiv, ButtonSimple, TitleList, ButtonSimpleDiv, OutPutDiv} fro
 import { LabelRenderList } from '../library-list-render/library-list-render';
 
 const contetList = [
-    {text: "Exemplo aqui", date: "20/03", userName: "Joãozinho", votes: 3}, 
-    {text: "Outro exemplo", date: "23/09", userName: "Pedrinho", votes: 5}, 
-    {text: "Calculo aqui", date: "04/12", userName: "Juquinha", votes: 10}
+    {text: "Calculo 1", date: "20/03", userName: "Joãozinho", votes: 3, codigoDisciplina: 'MAT2453'}, 
+    {text: "Introdução a programação", date: "23/09", userName: "Pedrinho", votes: 5, codigoDisciplina:'MAC3116' }, 
+    {text: "Energia e meio ambiente", date: "04/12", userName: "Juquinha", votes: 10, codigoDisciplina: 'PEA3100' }
 ];
 
 export class ButtonList extends React.Component {

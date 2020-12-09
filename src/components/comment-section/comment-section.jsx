@@ -10,7 +10,7 @@ import {
     TextUserName,
     PerfilImageDiv,
 } from "./comment-section.style";
-
+import { StyledLink } from '../fonts/fonts.style';
 import { PerfilImage } from '../perfil-image/perfil-image';
 
 export class CommentSection extends React.Component {
@@ -27,7 +27,7 @@ export class CommentSection extends React.Component {
             return (<></>);
         }
         return (
-            <CommentDiv isSubComment={this.props.isSubComment}>
+            <CommentDiv key={this.props.user.message+ this.props.user.id} isSubComment={this.props.isSubComment}>
                 <ImageDiv>
                     <PerfilImageDiv>
                         <PerfilImage imageUrl={this.props.user.imageUrl} size={1} ranking={this.props.user.ranking}/>
@@ -39,7 +39,9 @@ export class CommentSection extends React.Component {
                     </div>
                 </ImageDiv>
                 <TextDiv>
-                    <TextUserName> {this.props.user.name} </TextUserName>
+                    <StyledLink  to={{ pathname: `/userProfile/`+this.props.user.user_id }} >
+                        <TextUserName> {this.props.user.name} </TextUserName>
+                    </StyledLink>
                     <TextMain> {this.props.user.comment} </TextMain>
                 </TextDiv>
             </CommentDiv>

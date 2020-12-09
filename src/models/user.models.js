@@ -6,6 +6,8 @@ export const UserModel = (body) => (
         seguindo: body.seguindo,
         publicacoes: body.publicacoes,
         curso: body.curso,
+        numAvaliacoes: body.numDeAvaliacoes,
+        conteudosAcessados: body.conteudosAcessados, 
         imageUrl: body.imageUrl,
         name: body.nome
     }

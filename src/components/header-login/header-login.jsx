@@ -38,7 +38,7 @@ export class HeaderLogin extends React.Component {
                 </ButtonStatusDiv>
                 {this.state.isClick && (
                     <ButtonLabel>
-                        <StyledLink to={{ pathname: `/userProfile/1` }}>
+                        <StyledLink to={{ pathname: `/userProfile/1` }} >
                             <ButtonPerfil>Meu Perfil</ButtonPerfil>
                         </StyledLink>
                         <StyledLink to={{ pathname: `/minhas-disciplinas` }}>

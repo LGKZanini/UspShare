@@ -37,8 +37,8 @@ export class UserProfileName extends React.Component {
                         <CenterDiv>
                             <TitleName> {this.props.user.name} </TitleName>
                             <DisciplineName> {this.props.user.curso} </DisciplineName>
-                            <AvaliationsTitle> Numero de avaliações: 250</AvaliationsTitle>
-                            <AvaliationsTitle> Conteúdos Acessados: 406 </AvaliationsTitle>
+                            <AvaliationsTitle> Numero de avaliações: {this.props.user.numAvaliacoes}</AvaliationsTitle>
+                            <AvaliationsTitle> Conteúdos Acessados: {this.props.user.conteudosAcessados}</AvaliationsTitle>
                         </CenterDiv>
                         <CenterDiv>
                             <ButtonFollow> Seguir</ButtonFollow>

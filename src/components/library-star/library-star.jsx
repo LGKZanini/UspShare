@@ -43,18 +43,14 @@ export class LabelStarList extends React.Component {
                               </A>
                               )
                             : (
-                            <LabelButtonText> {'fodae?'+ this.props.text } </LabelButtonText>
+                                <LabelButtonText> {'fodae?'+ this.props.text } </LabelButtonText>
                             )
                         }
                     </LabelButtonCenterDiv>
                 </LabelButtonTextDiv>
                 <LabelDateStarDiv>
-                    <div>
-                        <NameUserContent> {this.props.userName} </NameUserContent>
-                    </div>
-                    <div>
-                        <DateContent> {this.props.date} </DateContent>
-                    </div>
+                    <NameUserContent> {this.props.userName} </NameUserContent>
+                    <DateContent> {this.props.date} </DateContent>
                     <div>
                         <Rating
                             name={this.props.index}

@@ -103,11 +103,11 @@ export class Comments extends React.Component {
                     this.props?.loading ? ( <></> )
                     : ( <SubTitle2>Seja o primeiro a comentar</SubTitle2> )
                 ) : (     
-                this.props.commentsSection.map(({commentMain, subsComment, index}) => (  
+                this.props.commentsSection.map(({commentMain, subsComment}, index ) => (  
                         <Fragment key={commentMain.name+commentMain.ranking+index}>
-                            <CommentSection user={commentMain} />
+                            <CommentSection user={commentMain}  />
                             <BreakLine numberLines={0.5}/>
-                            <CommentsRenderList subsComment={subsComment}/>
+                            <CommentsRenderList subsComment={subsComment} key={commentMain+index} />
                             <BreakLine numberLines={0.5}/>
                             <HrSection/>
                             <BreakLine numberLines={0.25}/>

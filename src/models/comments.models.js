@@ -16,6 +16,7 @@ export const CommentsModel = (body, status) => {
             imageUrl: comentario.imageUrl,
             comment: comentario.mensagem,
             ratingComment: comentario.nota,
+            user_id: Number(comentario.usuario_id),
             perfilUrl: ''
         })
     );
@@ -29,9 +30,10 @@ export const CommentsModel = (body, status) => {
                 id: Number(comentario.id),
                 name: comentario.nome,
                 ranking: 50,
-                imageURL: comentario.imageUrl,
+                imageUrl: comentario.imageUrl,
                 comment: comentario.mensagem,
                 ratingComment: comentario.nota,
+                user_id: Number(comentario.usuario_id),
                 perfilUrl: ''
             })
         );

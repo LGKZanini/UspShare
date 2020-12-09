@@ -13,7 +13,10 @@ export class LabelRenderList extends React.Component {
                         <Fragment key={contet.text+" "+index}> 
                             <LabelTrashList 
                                 key={index} 
-                                text={contet.text}/>
+                                text={contet.text}    
+                                codigoDisciplina={contet.codigoDisciplina}
+                            />
+                                
                         </Fragment>
                     ) )
                 :  ( this.props.contetList.map( (content, index) =>

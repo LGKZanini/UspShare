@@ -62,8 +62,8 @@ export const MaterialApoio = (props) => {
                         ))
                     }
                 </div>
-
-                <BreakLine numberLines={4} />
+                
+                <BreakLine numberLines={8} />
                 <Footer />
             </BodyContainer>
 
